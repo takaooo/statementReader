@@ -1,0 +1,19 @@
+intended data structure:
+bank | description | amount | date | category
+
+
+halifax d data structure:
+Transaction Date,Transaction Type,Sort Code,Account Number,Transaction Description,Debit Amount,Credit Amount,Balance
+skip - 1
+
+halifax c data structure:
+Date,Date entered,Reference,Description,Amount,
+skip - 1
+
+natwest data structure:
+Date, Type, Description, Value, Balance, Account Name, Account Number
+skip - 2
+
+amex data structure:
+Date,Description,Category,Amount
+skip - 12
