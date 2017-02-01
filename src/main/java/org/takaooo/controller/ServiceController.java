@@ -6,6 +6,7 @@ import org.takaooo.service.StatementReaderService;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 @Path("myresource")
 public class ServiceController {
@@ -32,7 +33,7 @@ public class ServiceController {
     public String upload(
             @FormDataParam("file") File inputFile,
             @PathParam("bank") String bank
-    ) {
+    ) throws FileNotFoundException {
         readerService.read(inputFile, bank);
         return "Received File!";
     }

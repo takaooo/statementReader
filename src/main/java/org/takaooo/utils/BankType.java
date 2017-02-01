@@ -21,6 +21,10 @@ public enum BankType {
         return excessRows;
     }
 
+    public List<String> getHeaders(){
+        return headers;
+    }
+
     public static BankType fromName(String name) {
         for(BankType bank : BankType.values()){
             if(bank.name().equalsIgnoreCase(name)){
