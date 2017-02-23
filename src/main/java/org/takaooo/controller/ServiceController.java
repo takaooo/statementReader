@@ -7,6 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Objects;
 
 @Path("myresource")
 public class ServiceController {
@@ -34,6 +35,7 @@ public class ServiceController {
             @FormDataParam("file") File inputFile,
             @PathParam("bank") String bank
     ) throws FileNotFoundException {
+        Objects.requireNonNull(inputFile);
         readerService.read(inputFile, bank);
         return "Received File!";
     }

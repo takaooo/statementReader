@@ -5,7 +5,7 @@ import java.util.List;
 
 public enum BankType {
     HALIFAX_CREDIT(1,Arrays.asList("Date", "DateEntered", "Reference", "Description", "Amount"),true),
-    AMEX(13, Arrays.asList("Date", "Description", "Category", "Amount"), false);
+    AMEX(14, Arrays.asList("Date", "Description", "Category", "Amount"), false);
 
     private int excessRows;
     private List<String> headers;
